@@ -50,56 +50,25 @@ console.log(coinFlip());
 
 // 10- Write a function which, given a 2-d array and another value x, returns true if x is present in the two d array, and false otherwise. function containsElement(arr, x){
 // }
+function containsElement2(array,x){
 
- function containsElement(array,x){
-     var array2=[];
-     for (var i=0;i<array.length;i++){
-         for(var j=0;j<array[i].length;j++){
-             console.log(array[i][j]);
-              array2.push(array[i][j]);
-         }
+     for(var i=0;i<array.length;i++){
+          for(var j=0;j<array.length;j++){
 
-     }
-     for(var x=0; x<array2.length; x++){
-         
+           if(array[i][j] === x){
+              return true;
+            }
+
      }
     }
-    //  for(var i=0;i<array.length;i++){
-    //      console.log(array);
-    //     for(var j=0;j<array[i].length;j++){
-    //         if (array[j][i]=== 3){
-    //             console.log(array[i][j]);
-    //         }
 
-   //
-   //   }
-   // }
+   return false;
 
+}
 
+var array = [[0,1,2,3], [3,2,1,0], [3,5,6,1], [3,8,3,4] ]
 
-  //
-  // function containsElement2(array,x){
-  //
-  //     for(var i=0;i<array.length;i++){
-  //         for(var j=0;j<array[i].length;j++){
-  //
-  //           var checkarr=array.find(function(x){ return array[i][j]===x;})
-  //
-  //     }
-  //   }
-  //   if(checkarr !=null){
-  //       return 'false';
-  //   }else{
-  //       return 'true';
-  //       }
-  //
-  //   }
-  //
-
-  // console.log(containsElement2([[1,2],[3,4]],7));
- // console.log(containsElement([['luluss'],['3'],['l']],"u"));
- console.log(containsElement([1,2],[3,4],1));
-  // console.log(containsElement([[1,3],[2,4],[5,6]],3));
+console.log(containsElement2(array,5));
 
 // 11-What is the relationship between html, the $scope construct, and angular expressions? (Expressions are the ones that are written like so: {{quote}} ).
 // the scope is the binding part between the html and the javaScript (controller)
@@ -108,7 +77,7 @@ console.log(coinFlip());
 // 12-Given the following edge list, draw the graph.
 
 // 13-Given the following adjacency Matrix, determine whether the graph is directed or undirected and draw it.
-
+  // is directed
 // 14-For exercises 9 and 10, if you assume that n is the size of one side of the matrix, what is the time complexity (Big Oh) of the algorithms you wrote?
-//  for exercises 9 is O(N2)
-// for exercises 10 O(N2)
+//  for exercises 9 is O(N^2)
+// for exercises 10 O(N^2)
